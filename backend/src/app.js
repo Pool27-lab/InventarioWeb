@@ -5,7 +5,7 @@ const morgan = require("morgan");
 
 const path = require("path");
 
-app.use(express.static(path.join(__dirname, "../public")));
+
 
 const authRoutes = require("./routes/authRoutes");
 const categoriaRoutes = require("./routes/categoriaRoutes");
@@ -19,17 +19,14 @@ require("./routes/dashboardRoutes");
 
 const app = express();
 
+
 app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
 
 // Ruta principal
-app.get("/", (req, res) => {
-    res.json({
-        mensaje: "API Sistema de Inventario funcionando 🚀"
-    });
-});
+
 
 // Rutas de autenticación
 app.use("/api/auth", authRoutes);
