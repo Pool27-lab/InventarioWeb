@@ -3,6 +3,10 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "../public")));
+
 const authRoutes = require("./routes/authRoutes");
 const categoriaRoutes = require("./routes/categoriaRoutes");
 const productoRoutes = require("./routes/productoRoutes");
@@ -37,4 +41,9 @@ app.use("/api/ventas", ventaRoutes);
 
 app.use("/api/dashboard", dashboardRoutes);
 
+app.get("*",(req,res)=>{
+    res.sendFile(
+        path.join(__dirname,"../public/index.html")
+    );
+});
 module.exports = app;

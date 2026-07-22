@@ -5,7 +5,7 @@ async function cargarDashboard(){
 
 
     const respuesta = await fetch(
-        "http://localhost:3000/api/dashboard",
+        "https://inventario-backend-k0jz.onrender.com/api/dashboard",
         {
             headers:{
                 "Authorization": `Bearer ${token}`

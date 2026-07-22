@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/api/clientes";
+const API = "https://inventario-backend-k0jz.onrender.com/api/clientes";
 
 
 async function cargarClientes(){

@@ -6,7 +6,7 @@ async function cargarProductos(){
 
     const respuesta = await fetch(
 
-        "http://localhost:3000/api/productos",
+        "https://inventario-backend-k0jz.onrender.com/api/productos",
 
         {
 
@@ -133,7 +133,7 @@ document.getElementById("id_categoria").value
 
 const respuesta = await fetch(
 
-"http://localhost:3000/api/productos",
+"https://inventario-backend-k0jz.onrender.com/api/productos",
 
 {
 
@@ -198,7 +198,7 @@ async function eliminarProducto(id_producto){
 
     const respuesta = await fetch(
 
-        `http://localhost:3000/api/productos/${id_producto}`,
+        `https://inventario-backend-k0jz.onrender.com/api/productos/${id_producto}`,
 
         {
 
@@ -256,7 +256,7 @@ async function editarProducto(id_producto){
 
     const respuesta = await fetch(
 
-        `http://localhost:3000/api/productos/${id_producto}`,
+        `https://inventario-backend-k0jz.onrender.com/api/productos/${id_producto}`,
 
         {
 
