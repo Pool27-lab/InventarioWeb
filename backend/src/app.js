@@ -38,9 +38,15 @@ app.use("/api/ventas", ventaRoutes);
 
 app.use("/api/dashboard", dashboardRoutes);
 
-app.get("*",(req,res)=>{
+app.use("/api/dashboard", dashboardRoutes);
+
+
+// Servir frontend
+app.use((req,res)=>{
     res.sendFile(
         path.join(__dirname,"../public/index.html")
     );
 });
+
+
 module.exports = app;
